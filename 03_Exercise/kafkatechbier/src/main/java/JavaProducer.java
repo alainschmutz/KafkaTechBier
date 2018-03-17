@@ -43,7 +43,9 @@ public class JavaProducer {
         Producer<String, String> producer = new org.apache.kafka.clients.producer.KafkaProducer<String, String>(properties);
 
         // Fill ArrayLists with values
-        Collections.addAll(employees, "RKO","DAL","PGR","DAL","SHU","TIN","LKE","TSC","ASH","FHE");
+        Collections.addAll(employees,         "ABO","ACO","AHO","AKE","AKU","ALA","APF","ARI","ASH","AVA","BBU","BGO","BSA","BSC","CGA","CGE","CHI","CLU","CPO","CRA","CRD","CRU","CSA","CTU","CZE","DAL","DKN","DLI","DOE","DPF","DST","DYU","FHE","FKL","FLO","FMU","FSE","FWU","FYA","GRE","GWA","HFR","HHE","JJA","JJO","JMA","JSR","JST","KAL","KDA","KGE","LPA","LSC","MBO","MBS","MBU","MEB","MEU","MFA","MFI,MFR","MGE","MHA","MHE","MIN","MJO","MKA","MKU","MMA","MPO","MSI","MST","MVE","MWA","NST","NWE","OFR","PAL","PAN","PBI","PFI","PGR","PKN","PKO","PNI","PPL","PPO","PST","RHA","RKO","ROB","RSC","RWA","SAR","SBA","SBR","SCU","SFA","SFL","SHO","SHU","SJA","SME","TAU","TBL","TRO","TST","TZI","VHU","XBU","XDE","YBR","YLI","YWE");
+
+
         Collections.addAll(description, "Mittagessen","Abendessen","Training","Bahn","Geschäftsauto","Wochenunterkunft","Flug","Hotel","BYO");
 
         // Do every x milliseconds
