@@ -1,3 +1,9 @@
+# Exercise setup
+
+1. **Start the VM**
+
+2. **Log on**
+
 # Exercise 1
 
 **Run the [landoop/fast-data-dev](https://github.com/Landoop/fast-data-dev) docker image**
@@ -80,6 +86,7 @@ You can now switch over to the producer terminal, produce some data, switch to t
 
 
 **Browse the Kafka UI** 
+
 ... and play a little bit around 
 
 # Exercise 2
