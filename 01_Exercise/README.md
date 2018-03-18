@@ -64,7 +64,7 @@ Now type things/messages in and press enter. Each line will then be pushed to Ka
 
 If you now go to your `topic1` in the Kafka UI, you'll notice that data is beeing assigned to random partitions. That is because we are not using a key, so the key is set to null. Also keep in mind, without providing a key there's no ordering!
 
-_Info: Both console producer and console consumer can be exited by pressing CTRL + C_
+_Info: Console producer can be exited by pressing CTRL + D (end of file in Linux)_
 
 **Consume from the topic using console consumer**
 
@@ -91,6 +91,8 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic topic1 --from-b
 ```
 
 You can now switch over to the producer terminal, produce some data, switch to the consumer terminal and see that data is going to be processed. Also you can check the data of the topics by using the Kafka UI.
+
+_Info: Console consumer can be stopped by pressing CTRL + C_
 
 
 **Browse the Kafka UI** 
