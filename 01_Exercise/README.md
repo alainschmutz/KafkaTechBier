@@ -100,24 +100,47 @@ _Info: Console consumer can be stopped by pressing CTRL + C_
 ... take a look at some other topics and play a little bit around 
 
 # Exercise 2
-**Go back to the terminal**
 
 If we provide a key, Kafka will take care that data with the same key is beeing stored in the same partition.
 
-Run [landoop/fast-data-dev](https://github.com/Landoop/fast-data-dev) docker image. For example:
+**Use the same topic**
+
+`topic1`
+
+**Specify key**
 
 ```
-docker run --rm -it -p 2181:2181 -p 3030:3030 -p 8081:8081 -p 8082:8082 -p 8083:8083 -p 9092:9092 -p 9581:9581 -p 9582:9582 -p 9583:9583 -p 9584:9584 -e ADV_HOST=127.0.0.1 landoop/fast-data-dev:latest
+kafka-console-producer --broker-list localhost:9092 --topic topic1 --property "parse.key=true" --property "key.separator=:"
 ```
 
-Use same topic
+**Again produce some data**
 
-Specify key and value to be written
+f.e.:
 
-Read key and value
+```
+key1:data1
+key1:data2
+key1:data3
+key2:data4
+key3:data5
+key3:data6
+```
 
-New topic with 2 partitions
+**Read key and value using console consumer**
 
-Write more data and see what happens to order
+
+```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic topic1 --from-beginning --property print.key=true
+```
+
+You can also print the timestamp by typing
+
+```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic topic1 --from-beginning --property print.key=true --property print.timestamp=true
+```
+
+**Now by yourself**
+1. Create a new topic with 2 partitions
+2. Write more data and see what happens to order
 
 
