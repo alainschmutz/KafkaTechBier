@@ -52,7 +52,7 @@ You can also view your topics by using the Kafka UI
 1. Your topics will be listed on the left
 1. Click `topic1`
 
-_Info: There are some other dummy topics, which were created by the COYOTE HEALTH CHECKS_
+_Info: There are some other topics, which were created by the landoop image_
 
 **Produce to the topic using console producer**
 ```
@@ -62,13 +62,9 @@ Data will now produced to `topic1`
 
 **Consume from the topic using console consumer**
 
-Open a new terminal, again make user to sudo and enter the password
+Open a new terminal
 
 `Terminal: File -> Open Terminal`
-
-```
-sudo su
-```
 
 Again enter the container bash in this new terminal
 
@@ -82,12 +78,12 @@ Finally, your data of `topic1` will be shown by typing
 kafka-console-consumer --bootstrap-server localhost:9092 --topic topic1 --from-beginning
 ```
 
-You can now switch over to the producer terminal, produce some data, switch to the consumer terminal and see that data is going to be processed
+You can now switch over to the producer terminal, produce some data, switch to the consumer terminal and see that data is going to be processed. Also you can check the data of the topics by using the Kafka UI.
 
 
 **Browse the Kafka UI** 
 
-... and play a little bit around 
+... take a look at some other topics and play a little bit around 
 
 # Exercise 2
 **Setup**
