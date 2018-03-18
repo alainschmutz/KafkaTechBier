@@ -139,6 +139,9 @@ You can also print the timestamp by typing
 kafka-console-consumer --bootstrap-server localhost:9092 --topic topic1 --from-beginning --property print.key=true --property print.timestamp=true
 ```
 
+**Go to the Kafka UI**
+On `topic1` you'll now see, that the data we just provided have a key. To the right of each data you'll see _Offset:_ and _Partition:_. You'll now notice that data with the same key is beeing stored on the same partition with incrementing offset.
+
 **Now by yourself**
 1. Create a new topic with 2 partitions
 2. Write more data and see what happens to order
