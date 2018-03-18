@@ -148,5 +148,6 @@ On `topic1` you'll now see, that the data we just provided have a key. To the ri
 1. Create a new topic with 2 partitions
 2. Write more data and see what happens to order
 
+# Next exercise
+
 Kafka Java Producer: https://github.com/alainschmutz/KafkaTechBier_JavaProducer
-Kafka Streams: https://github.com/fabiohecht/techbierkafkastreamsexercise
