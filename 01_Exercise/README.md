@@ -19,21 +19,13 @@
 ```
   docker run -d --rm --net=host --name kafka-dev-env -e RUNTESTS=0 landoop/fast-data-dev:latest
 ```
-_Note: This terminal MUST NOT be closed. If you close it, the Kafka-instance will stop._
+_Note: The container will now start running in the background_
 
 1. Wait ~1 minute, so Kafka can start up properly
 1. Now open firefox
 1. Open the bookmark "Kafka UI" in the bookmarks toolbar
 
-**Open a new terminal, again make user to sudo and enter the password**
-
-`Terminal: File -> Open Terminal`
-
-```
-sudo su
-```
-
-**Enter the container bash in this new terminal**
+**Enter the container bash in the terminal**
 
 ```
 docker run --rm -it --net=host landoop/fast-data-dev bash
