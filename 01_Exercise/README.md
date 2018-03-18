@@ -60,6 +60,12 @@ kafka-console-producer --broker-list localhost:9092 --topic topic1
 ```
 Data will now produced to `topic1`
 
+Now type things/messages in and press enter. Each line will then be pushed to Kafka with the message you just typed.
+
+If you now go to your `topic1` in the Kafka UI, you'll notice that data is beeing assigned to random partitions. That is because we are not using a key, so the key is set to null. Also keep in mind, without providing a key there's no ordering!
+
+_Info: Both console producer and console consumer can be exited by pressing CTRL + C_
+
 **Consume from the topic using console consumer**
 
 Open a new terminal
@@ -75,6 +81,12 @@ docker run --rm -it --net=host landoop/fast-data-dev bash
 Finally, your data of `topic1` will be shown by typing
 
 ```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic topic1
+```
+
+You can choose either if you want to print data from now or from the beginning, so all data of a topic is beeing printend.
+
+```
 kafka-console-consumer --bootstrap-server localhost:9092 --topic topic1 --from-beginning
 ```
 
@@ -86,7 +98,9 @@ You can now switch over to the producer terminal, produce some data, switch to t
 ... take a look at some other topics and play a little bit around 
 
 # Exercise 2
-**Setup**
+**Go back to the terminal**
+
+If we provide a key, Kafka will take care that data with the same key is beeing stored in the same partition.
 
 Run [landoop/fast-data-dev](https://github.com/Landoop/fast-data-dev) docker image. For example:
 
