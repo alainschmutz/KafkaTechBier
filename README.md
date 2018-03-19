@@ -14,11 +14,14 @@
 
 # Exercise 1
 
+JFYI, the root password is "iptagon". It is not needed for the normal exercises, but might if you want to do something crazy.
+
 **Run the [landoop/fast-data-dev](https://github.com/Landoop/fast-data-dev) docker image**
 
 ```
   docker run -d --rm --net=host --name kafka-dev-env -e RUNTESTS=0 landoop/fast-data-dev:latest
 ```
+
 _Note: The container will now start running in the background_
 
 1. Wait ~1 minute, so Kafka can start up properly
